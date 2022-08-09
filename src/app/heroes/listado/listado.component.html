@@ -1,0 +1,14 @@
+<p>Listado</p>
+<div *ngIf="sale; else noBorrado">
+    Se elimino: {{sale}}
+</div>
+<ng-template #noBorrado>
+    No Se elimino
+</ng-template>
+
+<ul *ngFor="let lista of heroes; let i=index">
+    <li>
+       [{{i+1}}] {{lista}}
+    </li>
+</ul>
+<button (click)="borrarHeroe()">Borrar</button>
